@@ -6,9 +6,13 @@ public class Main {
     public static void main(String[] args) {//TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
 
+        //Integrantes
         System.out.println("Jhon Murcia");
         System.out.println("Katherine Robayo");
         System.out.println("Oscar Gomes");
+
+        //Ejemplos practicos
+
 
         }
     }
