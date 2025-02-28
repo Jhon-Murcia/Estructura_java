@@ -18,111 +18,111 @@ public class Ejercicio_4 {//definicion de la clase principal
                 switch (i) {
                     case 1 -> {// pregunta 1
                         System.out.println(" Cual es el pais mas grande del mundo?");
-                        System.out.println("A. Rusia");
-                        System.out.println("B. Canadá");
-                        System.out.println("C. China");
+                        System.out.println("1. Rusia");
+                        System.out.println("2. Canadá");
+                        System.out.println("3. China");
                         System.out.print("Respuesta: ");
                         int Pregunta1 = entrada.nextInt();
-                        if (Pregunta1 == A)// respuesta correcta: Rusia
+                        if (Pregunta1 == 1)// respuesta correcta: Rusia
                             PreguntaCorrecta++;
                     }
 
                     case 2 -> {//Pregunta 2
                         System.out.println(" Cuantos planetas tiene el sistema solar?");
-                        System.out.println("A. 7");
-                        System.out.println("B. 8");
-                        System.out.println("C. 9");
+                        System.out.println("1. 7");
+                        System.out.println("2. 8");
+                        System.out.println("3. 9");
                         System.out.print("Respuesta: ");
                         int pregunta2 = entrada.nextInt();
-                        if (pregunta2 == B)//respuesta correcta: 8
+                        if (pregunta2 == 2)//respuesta correcta: 8
                             PreguntaCorrecta++;
                     }
 
                     case 3 -> {//Pregunta 3
                         System.out.println(" Cual es el río mas largo del mundo?");
-                        System.out.println("A. Amazonas");
-                        System.out.println("B. Nilo");
-                        System.out.println("C. Bogota xd");
+                        System.out.println("1. Amazonas");
+                        System.out.println("2. Nilo");
+                        System.out.println("3. Bogota xd");
                         System.out.print("Respuesta: ");
                         int pregunta3 = entrada.nextInt();
-                        if (pregunta3 == A)//respuesta correcta: Amazonas
+                        if (pregunta3 == 1)//respuesta correcta: Amazonas
                             PreguntaCorrecta++;
                     }
 
                     case 4 -> {//pregunta 4
                         System.out.println(" Quien pinto la Mona Lisa?");
-                        System.out.println("A. Miguel Angel");
-                        System.out.println("B. Leonardo da Vinci");
-                        System.out.println("C. Vincent van Gogh");
+                        System.out.println("1. Miguel Angel");
+                        System.out.println("2. Leonardo da Vinci");
+                        System.out.println("3. Vincent van Gogh");
                         System.out.print("Respuesta: ");
                         int pregunta4 = entrada.nextInt();
-                        if (pregunta4 == B)//respuesta correcta Leonardo da Vinci
+                        if (pregunta4 == 2)//respuesta correcta Leonardo da Vinci
                             PreguntaCorrecta++;
                     }
 
                     case 5 -> {//pregunta 5
                         System.out.println(" Que gas respiramos?");
-                        System.out.println("A. Dioxido de carbono");
-                        System.out.println("B. Oxigeno");
-                        System.out.println("C. Nitrogeno");
+                        System.out.println("1. Dioxido de carbono");
+                        System.out.println("2. Oxigeno");
+                        System.out.println("3. Nitrogeno");
                         System.out.print("Respuesta: ");
                         int pregunta5 = entrada.nextInt();
-                        if (pregunta5 == B)//respuesta correcta: Oxigeno
+                        if (pregunta5 == 2)//respuesta correcta: Oxigeno
                             PreguntaCorrecta++;
                     }
 
                     case 6 -> {//pregunta 6
                         System.out.println(" Cual es el animal terrestre mas rapido?");
-                        System.out.println("A. Guepardo");
-                        System.out.println("B. Leon");
-                        System.out.println("C. Tigre");
+                        System.out.println("1. Guepardo");
+                        System.out.println("2. Leon");
+                        System.out.println("3. Tigre");
                         System.out.print("Respuesta: ");
                         int pregunta6 = entrada.nextInt();
-                        if (pregunta6 == A)//respuesta correcta: Guepardo
+                        if (pregunta6 == 1)//respuesta correcta: Guepardo
                             PreguntaCorrecta++;
                     }
 
                     case 7 -> {//pregunta 7
                         System.out.println(" Cual es el oceano mas grande?");
-                        System.out.println("A. Atlantico");
-                        System.out.println("B. Indico");
-                        System.out.println("C. Pacifico");
+                        System.out.println("1. Atlantico");
+                        System.out.println("2. Indico");
+                        System.out.println("3. Pacifico");
                         System.out.print("Respuesta: ");
                         int pregunta7 = entrada.nextInt();
-                        if (pregunta7 == C)//respuesta correcta: Pacifico
+                        if (pregunta7 == 3)//respuesta correcta: Pacifico
                             PreguntaCorrecta++;
                     }
 
                     case 8 -> {//pregunta 8
                         System.out.println("En que pais se encuentran las piramides de Giza?");
-                        System.out.println("A. Peru");
-                        System.out.println("B. Egipto");
-                        System.out.println("C. Mexico");
+                        System.out.println("1. Peru");
+                        System.out.println("2. Egipto");
+                        System.out.println("3. Mexico");
                         System.out.print("Respuesta: ");
                         int pregunta8 = entrada.nextInt();
-                        if (pregunta8 == B)//respuesta correcta: Egipto
+                        if (pregunta8 == 2)//respuesta correcta: Egipto
                             PreguntaCorrecta++;
                     }
 
                     case 9 -> {//pregunta 9
                         System.out.println("Cual es el idioma mas hablado en el mundo?");
-                        System.out.println("A. Ingles");
-                        System.out.println("B. Español");
-                        System.out.println("C. Chino mandarín");
+                        System.out.println("1. Ingles");
+                        System.out.println("2. Español");
+                        System.out.println("3. Chino mandarín");
                         System.out.print("Respuesta: ");
                         int pregunta9 = entrada.nextInt();
-                        if (pregunta9 == C)//respuesta correcta: Chino Mandarin
+                        if (pregunta9 == 3)//respuesta correcta: Chino Mandarin
                             PreguntaCorrecta++;
                     }
 
                     case 10 -> {//pregunta 10
                         System.out.println("Cual es la capital de Francia?");
-                        System.out.println("A. Paris");
-                        System.out.println("B. Londres");
-                        System.out.println("C. Roma");
+                        System.out.println("1. Paris");
+                        System.out.println("2. Londres");
+                        System.out.println("3. Roma");
                         System.out.print("Respuesta: ");
                         int pregunta10 = entrada.nextInt();
-                        if (pregunta10 == A)// respuesta correcta: paris
+                        if (pregunta10 == 1)// respuesta correcta: paris
                             PreguntaCorrecta++;
                     }
                 }
