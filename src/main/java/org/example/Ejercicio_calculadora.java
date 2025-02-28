@@ -32,7 +32,7 @@ public class Ejercicio_calculadora {
                     double num2= entrada.nextDouble();
                     System.out.println("Resultado: "+(num1+num2));
                     break;
-
+                //Parte 2 de la calculadora.
                 case 2:
                     System.out.println("Ingresa el primer numero");
                     double num1= entrada.nextDouble();
