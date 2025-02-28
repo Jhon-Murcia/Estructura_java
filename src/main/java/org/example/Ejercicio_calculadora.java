@@ -11,6 +11,7 @@ public class Ejercicio_calculadora {
         boolean continuar = true;
 
         while (continuar) {
+
             System.out.println("Menu");
             System.out.println("1. Suma");
             System.out.println("2. Resta");
