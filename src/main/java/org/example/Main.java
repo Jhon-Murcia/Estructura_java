@@ -1,5 +1,10 @@
 package org.example;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -7,51 +12,139 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
 
         //Integrantes
-        System.out.println("Jhon Murcia");
-        System.out.println("Katherine Robayo");
-        System.out.println("Oscar Gomes");
+        //System.out.println("Jhon Murcia");
+        //System.out.println("Katherine Robayo");
+        //System.out.println("Oscar Gomes");
 
-        //Ejemplos practicos
+        //Ejemplo practico utilizando los tipos de datos primitivos
 
-        Scanner entrada=new Scanner(System.in);
-        System.out.println("Este es un programa que recoge los datos del usuario y los imprime");
-        System.out.println("Ingrese su edad");
-        byte edad=entrada.nextByte();
+        Scanner entrada = new Scanner(System.in);
+        Random aleatorio = new Random();
 
-        System.out.println("Ingrese su año de nacimiento");
-        short nacimiento=entrada.nextShort();
-
-        System.out.println("Ingrese su saldo de cuenta bancaria");
-        int saldo=entrada.nextInt();
-
-        System.out.println("Ingrese su numero de identificacion");
-        long id=entrada.nextLong();
-
-        System.out.println("Ingrese su altura (m)");
-        float altura=entrada.nextFloat();
-
-        System.out.println("Ingrese su peso (Kg)");
-        double peso=entrada.nextDouble();
-
-        System.out.println("Ingrese su tipo sanguineo");
-        char tipo_sanguineo=entrada.next().charAt(0);
-
-        System.out.println("¿Su cuenta esta activa?");
-        boolean cuenta_activa= entrada.nextBoolean();
+        //se pide el nombre del jugador o jugadora
+        System.out.println("Ingresa tu nombre: ");
+        String nombreJugador = entrada.nextLine();
 
 
-        System.out.println("Datos del usuario");
-        System.out.println("Edad: "+edad);
-        System.out.println("Año de nacimiento: "+nacimiento);
-        System.out.println("Saldo de su cuenta bancaria: $"+saldo);
-        System.out.println("Numero de identificacion: "+id);
-        System.out.println("Altura: "+altura+"m");
-        System.out.println("Peso: "+peso+"Kg");
-        System.out.println("Tipo sanguineo: "+tipo_sanguineo);
-        System.out.println("Cuenta activa: "+cuenta_activa);
+        // Intentos por pregunta
+        int intentosMaximos = 2;
+        short puntos = 0;
 
+        // Datos correctos
+        int patasdearana = 8;
+        long edadTierra = 4500000000L;
+        float aguadelCuerpoH = 60.5f;
+        double pi = 3.1416;
+        char letraAleatoria = (char) (aleatorio.nextInt(26) + 'A');
 
+        // Lista de preguntas con respuestas y tipos de datos
+        List<Pregunta> preguntas = new ArrayList<>();
+        preguntas.add(new Pregunta("¿Cuántas patas tiene una araña?", patasdearana));
+        preguntas.add(new Pregunta("¿Qué edad aproximadamente tiene la Tierra?", edadTierra));
+        preguntas.add(new Pregunta("¿Cuánto porcentaje del cuerpo humano es agua?", aguadelCuerpoH));
+        preguntas.add(new Pregunta("¿Cuál es el valor de π (pi) con 4 decimales?", pi));
+        preguntas.add(new Pregunta("Pregunta Sorpresa: ¿Qué letra apareció aleatoriamente?", letraAleatoria));
+
+        // Barajar el orden de las preguntas
+        Collections.shuffle(preguntas);
+
+        System.out.println("\n🎮 ¡Bienvenido, " + nombreJugador + "! Las preguntas aparecerán en orden aleatorio.");
+        System.out.println("Tienes " + intentosMaximos + " intentos por cada pregunta. ¡Buena suerte!\n");
+
+        // Iterar sobre las preguntas en el orden barajado
+        for (Pregunta pregunta : preguntas) {
+            int intentos = intentosMaximos;
+            while (intentos > 0) {
+                System.out.println("\n" + pregunta.texto);
+                System.out.print(" Respuesta: ");
+
+                if (pregunta.respuesta instanceof Integer && entrada.hasNextInt()) {
+                    int respuestaUsuario = entrada.nextInt();
+                    entrada.nextLine(); // Limpiar buffer
+
+                    if (respuestaUsuario == (int) pregunta.respuesta) {
+                        puntos += 10;
+                        System.out.println(" ¡Correcto! Obtienes 10 puntos.");
+                        break;
+                    }
+
+                } else if (pregunta.respuesta instanceof Long && entrada.hasNextLong()) {
+                    long respuestaUsuario = entrada.nextLong();
+                    entrada.nextLine();
+
+                    if (Math.abs(respuestaUsuario - (long) pregunta.respuesta) < 500000000) {
+                        puntos += 10;
+                        System.out.println("¡Correcto! Obtienes 10 puntos.");
+                        break;
+                    }
+
+                } else if (pregunta.respuesta instanceof Float && entrada.hasNextFloat()) {
+                    float respuestaUsuario = entrada.nextFloat();
+                    entrada.nextLine();
+
+                    if (Math.abs(respuestaUsuario - (float) pregunta.respuesta) < 5) {
+                        puntos += 10;
+                        System.out.println(" ¡Correcto! Obtienes 10 puntos.");
+                        break;
+                    }
+
+                } else if (pregunta.respuesta instanceof Double && entrada.hasNextDouble()) {
+                    double respuestaUsuario = entrada.nextDouble();
+                    entrada.nextLine();
+
+                    if (Math.abs(respuestaUsuario - (double) pregunta.respuesta) < 0.01) {
+                        puntos += 10;
+                        System.out.println("¡Correcto! Obtienes 10 puntos.");
+                        break;
+                    }
+
+                } else if (pregunta.respuesta instanceof Character) {
+                    char respuestaUsuario = entrada.next().charAt(0);
+                    entrada.nextLine();
+
+                    if (Character.toUpperCase(respuestaUsuario) == (char) pregunta.respuesta) {
+                        puntos += 10;
+                        System.out.println(" ¡Correcto! Obtienes 10 puntos.");
+                        break;
+                    }
+                } else {
+                    System.out.println(" Entrada inválida. Intenta de nuevo.");
+                    entrada.next(); // Limpiar entrada incorrecta
+                    continue;
+                }
+
+                intentos--;
+                if (intentos > 0) {
+                    System.out.println(" Incorrecto. Intentos restantes: " + intentos);
+                } else {
+                    System.out.println(" Incorrecto. La respuesta correcta era: " + pregunta.respuesta);
+                }
+            }
+        }
+
+        // Mostrar puntuación final
+        System.out.println("\n Puntuación final: " + puntos);
+        if (puntos >= 30) {
+            System.out.println(" ¡Felicidades, " + nombreJugador + "! Obtuviste " + puntos + " puntos.");
+        } else {
+            System.out.println(" Lo siento, " + nombreJugador + ". Solo conseguiste " + puntos + " puntos.");
+            System.out.println("Inténtalo nuevamente y mejora tu puntuación.");
+        }
+
+        System.out.println("\n🎮 ¡Gracias por jugar!");
         entrada.close();
+    }
+
+    // Clase para manejar preguntas de distintos tipos de datos
+    static class Pregunta {
+        String texto;
+        Object respuesta;
+
+        public Pregunta(String texto, Object respuesta) {
+            this.texto = texto;
+            this.respuesta = respuesta;
+
 
         }
     }
+}
