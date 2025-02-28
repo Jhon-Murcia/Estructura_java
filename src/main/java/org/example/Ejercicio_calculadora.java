@@ -33,6 +33,45 @@ public class Ejercicio_calculadora {
                     System.out.println("Resultado: "+(num1+num2));
                     break;
 
+                case 2:
+                    System.out.println("Ingresa el primer numero");
+                    double num1= entrada.nextDouble();
+                    System.out.println("Ingresa el segundo numero");
+                    double num2= entrada.nextDouble();
+                    System.out.println("Resultado: "+(num1-num2));
+                    break;
+                case 3:
+                    System.out.println("Ingresa el primer numero");
+                    double num1= entrada.nextDouble();
+                    System.out.println("Ingresa el segundo numero");
+                    double num2= entrada.nextDouble();
+                    System.out.println("Resultado: "+(num1*num2));
+                    break;
+
+                case 4:
+                    System.out.println("Ingresa el primer numero");
+                    double num1= entrada.nextDouble();
+                    System.out.println("Ingresa el segundo numero");
+                    double num2= entrada.nextDouble();
+                    System.out.println("Resultado: "+(num1/num2));
+                    break;
+
+                case 5:
+                    System.out.println("Ingresa el primer numero");
+                    double num1= entrada.nextDouble();
+                    System.out.println("Ingresa el segundo numero");
+                    double num2= entrada.nextDouble();
+                    System.out.println("Resultado: "+Math.pow(num1, num2));
+                    break;
+
+                case 6:
+                    System.out.println("Ingresa el primer numero");
+                    double num1= entrada.nextDouble();
+                    if (num1 >= 0) {
+                        System.out.println("Resultado: " + Math.sqrt(num1));
+                    } else {   System.out.println("❌ Error: No se puede calcular la raíz cuadrada de un número negativo.");
+                    }
+                    break;
             }
         }
     }
