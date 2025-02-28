@@ -35,44 +35,66 @@ public class Ejercicio_calculadora {
                 //Parte 2 de la calculadora.
                 case 2:
                     System.out.println("Ingresa el primer numero");
-                    double num1= entrada.nextDouble();
+                    double num3= entrada.nextDouble();
                     System.out.println("Ingresa el segundo numero");
-                    double num2= entrada.nextDouble();
-                    System.out.println("Resultado: "+(num1-num2));
+                    double num4= entrada.nextDouble();
+                    System.out.println("Resultado: "+(num3-num4));
                     break;
                 case 3:
                     System.out.println("Ingresa el primer numero");
-                    double num1= entrada.nextDouble();
+                    double num5= entrada.nextDouble();
                     System.out.println("Ingresa el segundo numero");
-                    double num2= entrada.nextDouble();
-                    System.out.println("Resultado: "+(num1*num2));
+                    double num6= entrada.nextDouble();
+                    System.out.println("Resultado: "+(num5*num6));
                     break;
 
                 case 4:
                     System.out.println("Ingresa el primer numero");
-                    double num1= entrada.nextDouble();
+                    double num7= entrada.nextDouble();
                     System.out.println("Ingresa el segundo numero");
-                    double num2= entrada.nextDouble();
-                    System.out.println("Resultado: "+(num1/num2));
+                    double num8= entrada.nextDouble();
+                    System.out.println("Resultado: "+(num7/num8));
                     break;
 
                 case 5:
                     System.out.println("Ingresa el primer numero");
-                    double num1= entrada.nextDouble();
+                    double num9= entrada.nextDouble();
                     System.out.println("Ingresa el segundo numero");
-                    double num2= entrada.nextDouble();
-                    System.out.println("Resultado: "+Math.pow(num1, num2));
+                    double num10= entrada.nextDouble();
+                    System.out.println("Resultado: "+Math.pow(num9, num10));
                     break;
 
                 case 6:
                     System.out.println("Ingresa el primer numero");
-                    double num1= entrada.nextDouble();
-                    if (num1 >= 0) {
-                        System.out.println("Resultado: " + Math.sqrt(num1));
-                    } else {   System.out.println("❌ Error: No se puede calcular la raíz cuadrada de un número negativo.");
+                    double num11= entrada.nextDouble();
+                    if (num11 >= 0) {
+                        System.out.println("Resultado: " + Math.sqrt(num11));
+                    } else {   System.out.println(" Error: No se puede calcular la raíz cuadrada de un número negativo.");
                     }
                     break;
+                case 7:
+                    System.out.print("Ingrese el primer número: ");
+                    num1 = entrada.nextDouble();
+                    System.out.print("Ingrese el segundo número: ");
+                    num2 = entrada.nextDouble();
+                    System.out.println("Resultado: " + (num1 % num2));
+                    break;
+                case 8:
+                    System.out.print("Ingrese la temperatura en grados Celsius: ");
+                    num1 = entrada.nextDouble();
+                    double fahrenheit = (num1 * 9/5) + 32;
+                    System.out.println("Temperatura en Fahrenheit: " + fahrenheit + "°F");
+                    break;
+                case 9:
+                    System.out.println(" Saliendo de la calculadora. ¡Hasta luego!");
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println(" Opción no válida. Intente de nuevo.");
             }
         }
+
+        entrada.close();
     }
 }
+
