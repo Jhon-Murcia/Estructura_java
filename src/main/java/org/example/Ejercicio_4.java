@@ -23,7 +23,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. China");
                         System.out.print("Respuesta: ");
                         int Pregunta1 = entrada.nextInt();
-                        if (Pregunta1 == 1)// respuesta correcta: Rusia
+                        if (Pregunta1 == A)// respuesta correcta: Rusia
                             PreguntaCorrecta++;
                     }
 
@@ -34,7 +34,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. 9");
                         System.out.print("Respuesta: ");
                         int pregunta2 = entrada.nextInt();
-                        if (pregunta2 == 2)//respuesta correcta: 8
+                        if (pregunta2 == B)//respuesta correcta: 8
                             PreguntaCorrecta++;
                     }
 
@@ -45,7 +45,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Bogota xd");
                         System.out.print("Respuesta: ");
                         int pregunta3 = entrada.nextInt();
-                        if (pregunta3 == 1)//respuesta correcta: Amazonas
+                        if (pregunta3 == A)//respuesta correcta: Amazonas
                             PreguntaCorrecta++;
                     }
 
@@ -56,7 +56,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Vincent van Gogh");
                         System.out.print("Respuesta: ");
                         int pregunta4 = entrada.nextInt();
-                        if (pregunta4 == 2)//respuesta correcta
+                        if (pregunta4 == B)//respuesta correcta Leonardo da Vinci
                             PreguntaCorrecta++;
                     }
 
@@ -67,7 +67,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Nitrogeno");
                         System.out.print("Respuesta: ");
                         int pregunta5 = entrada.nextInt();
-                        if (pregunta5 == 2)//respuesta correcta: Oxigeno
+                        if (pregunta5 == B)//respuesta correcta: Oxigeno
                             PreguntaCorrecta++;
                     }
 
@@ -78,7 +78,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Tigre");
                         System.out.print("Respuesta: ");
                         int pregunta6 = entrada.nextInt();
-                        if (pregunta6 == 1)//respuesta correcta: Guepardo
+                        if (pregunta6 == A)//respuesta correcta: Guepardo
                             PreguntaCorrecta++;
                     }
 
@@ -89,7 +89,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Pacifico");
                         System.out.print("Respuesta: ");
                         int pregunta7 = entrada.nextInt();
-                        if (pregunta7 == 3)//respuesta correcta: Pacifico
+                        if (pregunta7 == C)//respuesta correcta: Pacifico
                             PreguntaCorrecta++;
                     }
 
@@ -100,7 +100,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Mexico");
                         System.out.print("Respuesta: ");
                         int pregunta8 = entrada.nextInt();
-                        if (pregunta8 == 2)//respuesta correcta: Egipto
+                        if (pregunta8 == B)//respuesta correcta: Egipto
                             PreguntaCorrecta++;
                     }
 
@@ -111,7 +111,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Chino mandarín");
                         System.out.print("Respuesta: ");
                         int pregunta9 = entrada.nextInt();
-                        if (pregunta9 == 3)//respuesta correcta: Chino Mandarin
+                        if (pregunta9 == C)//respuesta correcta: Chino Mandarin
                             PreguntaCorrecta++;
                     }
 
@@ -122,7 +122,7 @@ public class Ejercicio_4 {//definicion de la clase principal
                         System.out.println("C. Roma");
                         System.out.print("Respuesta: ");
                         int pregunta10 = entrada.nextInt();
-                        if (pregunta10 == 1)// respuesta correcta: paris
+                        if (pregunta10 == A)// respuesta correcta: paris
                             PreguntaCorrecta++;
                     }
                 }
