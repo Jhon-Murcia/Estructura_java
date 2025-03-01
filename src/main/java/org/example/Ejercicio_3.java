@@ -11,7 +11,7 @@ public class Ejercicio_3 { // definicion de la clase principal
             int numero;//Variable para almacenar el numero ingresado
             boolean esPrimo = true;// vairable si booleana que indicara si el numero es primo o no
 
-            System.out.println("Ingrese un numero entero");//pide al usuario que ingrese un numero
+            System.out.println("Ingrese un número entero");//pide al usuario que ingrese un numero
             numero = scanner.nextInt();//lee el numero ingresado por el usuario
             //verifica si el numero es menor o igual a 1, ya que estos no son primos
             if(numero<=1){
@@ -30,10 +30,10 @@ public class Ejercicio_3 { // definicion de la clase principal
 
             //estructura de control con if-else, muestra el resultado
             if(esPrimo){
-                System.out.println(numero+ "es numero primo");//mensaje si es primo
+                System.out.println( numero + " es número primo");//mensaje si es primo
 
             } else {
-                System.out.println(numero + "no es numero primo");//mensaje si no es primo
+                System.out.println( numero  +  " no es número primo");//mensaje si no es primo
             }
 
             scanner.close();// Cierra el objeto scanner para liberar recursos
