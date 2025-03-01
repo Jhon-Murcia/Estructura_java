@@ -1,9 +1,7 @@
 package org.example;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.text.DecimalFormat;
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -19,132 +17,73 @@ public class Main {
         //Ejemplo practico utilizando los tipos de datos primitivos
 
         Scanner entrada = new Scanner(System.in);
-        Random aleatorio = new Random();
 
-        //se pide el nombre del jugador o jugadora
+
+        //se pide el nombre del usuario
         System.out.println("Ingresa tu nombre: ");
-        String nombreJugador = entrada.nextLine();
+        String nombreUsuario = entrada.nextLine();
 
 
-        // Intentos por pregunta
-        int intentosMaximos = 2;
-        short puntos = 0;
+        // Mensaje de Bienvenida y explicación de lo que se va a realizar
+        System.out.println("\nBienvenid@, " + nombreUsuario  + "Vamos a trabajar algunas operaciones con diferentes tipos de datos primitivos en java, en donde responderas algunas preguntas. \n");
 
-        // Datos correctos
-        int patasdearana = 8;
-        long edadTierra = 4500000000L;
-        float aguadelCuerpoH = 60.5f;
-        double pi = 3.1416;
-        char letraAleatoria = (char) (aleatorio.nextInt(26) + 'A');
+        System.out.println("Ingresa tu edad en numeros : ");
+        byte edad = entrada.nextByte();
 
-        // Lista de preguntas con respuestas y tipos de datos
-        List<Pregunta> preguntas = new ArrayList<>();
-        preguntas.add(new Pregunta("¿Cuántas patas tiene una araña?", patasdearana));
-        preguntas.add(new Pregunta("¿Qué edad aproximadamente tiene la Tierra?", edadTierra));
-        preguntas.add(new Pregunta("¿Cuánto porcentaje del cuerpo humano es agua?", aguadelCuerpoH));
-        preguntas.add(new Pregunta("¿Cuál es el valor de π (pi) con 4 decimales?", pi));
-        preguntas.add(new Pregunta("Pregunta Sorpresa: ¿Qué letra apareció aleatoriamente?", letraAleatoria));
+        System.out.println("Ingresa el año actual sin puntos ni signos:");
+        short year = entrada.nextShort();
 
-        // Barajar el orden de las preguntas
-        Collections.shuffle(preguntas);
+        System.out.println("Ingresa el número aproximado de la cantidad de población de tu municipio: ");
+        int poblacionCiudad = entrada.nextInt();
 
-        System.out.println("\n🎮 ¡Bienvenido, " + nombreJugador + "! Las preguntas aparecerán en orden aleatorio.");
-        System.out.println("Tienes " + intentosMaximos + " intentos por cada pregunta. ¡Buena suerte!\n");
+        System.out.println("Ingresa el número aproximado de pasos que das en un año");
+        long pasos_en_un_anio = entrada.nextLong();
 
-        // Iterar sobre las preguntas en el orden barajado
-        for (Pregunta pregunta : preguntas) {
-            int intentos = intentosMaximos;
-            while (intentos > 0) {
-                System.out.println("\n" + pregunta.texto);
-                System.out.print(" Respuesta: ");
+        System.out.println("Ingresa el precio de un producto: ");
+        float precioProducto = entrada.nextFloat();
 
-                if (pregunta.respuesta instanceof Integer && entrada.hasNextInt()) {
-                    int respuestaUsuario = entrada.nextInt();
-                    entrada.nextLine(); // Limpiar buffer
 
-                    if (respuestaUsuario == (int) pregunta.respuesta) {
-                        puntos += 10;
-                        System.out.println(" ¡Correcto! Obtienes 10 puntos.");
-                        break;
-                    }
+        System.out.println("Ingresa el valor de π con solo 4 decimales");
+        String piInput = entrada.next();
+        piInput = piInput.replace(",", ".");
+        double pi = Double.parseDouble(piInput);
 
-                } else if (pregunta.respuesta instanceof Long && entrada.hasNextLong()) {
-                    long respuestaUsuario = entrada.nextLong();
-                    entrada.nextLine();
+        System.out.print("¿Eres mayor de edad? Escribe (true, Si/false, No): ");
+        boolean esMayorDeEdad =entrada.nextBoolean();
 
-                    if (Math.abs(respuestaUsuario - (long) pregunta.respuesta) < 500000000) {
-                        puntos += 10;
-                        System.out.println("¡Correcto! Obtienes 10 puntos.");
-                        break;
-                    }
+        System.out.print("Ingresa la inicial de tu nombre: ");
+        char inicial = entrada.next().charAt(0);
 
-                } else if (pregunta.respuesta instanceof Float && entrada.hasNextFloat()) {
-                    float respuestaUsuario = entrada.nextFloat();
-                    entrada.nextLine();
 
-                    if (Math.abs(respuestaUsuario - (float) pregunta.respuesta) < 5) {
-                        puntos += 10;
-                        System.out.println(" ¡Correcto! Obtienes 10 puntos.");
-                        break;
-                    }
+        String mensaje = "Gracias por participar en este ejercicio!";
 
-                } else if (pregunta.respuesta instanceof Double && entrada.hasNextDouble()) {
-                    double respuestaUsuario = entrada.nextDouble();
-                    entrada.nextLine();
 
-                    if (Math.abs(respuestaUsuario - (double) pregunta.respuesta) < 0.01) {
-                        puntos += 10;
-                        System.out.println("¡Correcto! Obtienes 10 puntos.");
-                        break;
-                    }
+        // Operaciones con las variables ingresadaa
 
-                } else if (pregunta.respuesta instanceof Character) {
-                    char respuestaUsuario = entrada.next().charAt(0);
-                    entrada.nextLine();
+        int nuevaEdad = edad + 5;
+        long doblePasos = pasos_en_un_anio * 2;
+        float descuento = precioProducto * 0.10f;
+        float precioFinal = precioProducto - descuento;
+        double areaCirculo = pi * Math.pow(10, 2);
+        boolean anioBisiesto = year % 4 == 0 && year % 100 != 0 || (year % 400 == 0);
+        char siguienteLetra = (char) (inicial + 1);
+        String mensaje1 = mensaje + "Tu inicial es: " + inicial;
 
-                    if (Character.toUpperCase(respuestaUsuario) == (char) pregunta.respuesta) {
-                        puntos += 10;
-                        System.out.println(" ¡Correcto! Obtienes 10 puntos.");
-                        break;
-                    }
-                } else {
-                    System.out.println(" Entrada inválida. Intenta de nuevo.");
-                    entrada.next(); // Limpiar entrada incorrecta
-                    continue;
-                }
+        DecimalFormat formato = new DecimalFormat(" #,###");
 
-                intentos--;
-                if (intentos > 0) {
-                    System.out.println(" Incorrecto. Intentos restantes: " + intentos);
-                } else {
-                    System.out.println(" Incorrecto. La respuesta correcta era: " + pregunta.respuesta);
-                }
-            }
-        }
+        // Mostrar o imprimir los resultados
+        System.out.println("\nRespuestas obtenidas:");
+        System.out.println("Edad en 5 años:" + nuevaEdad);
+        System.out.println("Doble de los pasos dados en un año:" + doblePasos +  "pasos");
+        System.out.println(" Descuento del 10%  es : " + formato.format((descuento)));
+        System.out.println("El precio final con el descuento es de: "+formato.format(precioFinal));
+        System.out.println("Area de un círculo de radio 10 : " + areaCirculo);
+        System.out.println("¿El año es bisiesto?" + anioBisiesto);
+        System.out.println(" la siguiente letra después de '" + inicial + "' es: " + siguienteLetra);
+        System.out.println(mensaje1);
 
-        // Mostrar puntuación final
-        System.out.println("\n Puntuación final: " + puntos);
-        if (puntos >= 30) {
-            System.out.println(" ¡Felicidades, " + nombreJugador + "! Obtuviste " + puntos + " puntos.");
-        } else {
-            System.out.println(" Lo siento, " + nombreJugador + ". Solo conseguiste " + puntos + " puntos.");
-            System.out.println("Inténtalo nuevamente y mejora tu puntuación.");
-        }
-
-        System.out.println("\n🎮 ¡Gracias por jugar!");
+        //cerramos el scanner
         entrada.close();
-    }
 
-    // Clase para manejar preguntas de distintos tipos de datos
-    static class Pregunta {
-        String texto;
-        Object respuesta;
-
-        public Pregunta(String texto, Object respuesta) {
-            this.texto = texto;
-            this.respuesta = respuesta;
-
-
-        }
     }
 }
