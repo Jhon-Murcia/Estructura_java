@@ -4,7 +4,7 @@ public class Ejercicio_3 { // definicion de la clase principal
 
     public static void main(String[] args) { //metodo donde inicia la clase principal
             System.out.println("En este codigo vamos a escoger un numero y el programa, nos dira si es primo o si no lo es");//mensaje inicial
-                    System.out.println("Usando estructuras de control como if, else, etc...")//mensaje inicial
+            System.out.println("Usando estructuras de control como if, else, etc...")//mensaje inicial
 
             Scanner scanner = new Scanner(System.in);// crear un objeto Scanner para leer la entrada del usuario
 
