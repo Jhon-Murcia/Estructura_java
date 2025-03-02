@@ -1,22 +1,23 @@
 package org.example;
 
-import java.util.Scanner;
+import java.util.Scanner; //Importacion del Scanner para que el usuario pueda ingresar los datos requeridos por el programa
 
 public class Ejercicio_calculadora {
     public static void main(String[] args) {
 
+        //Mesnajes iniciales de bienvenida y funcionalidad del codigo
         System.out.println("Bienvenid@ a la calculadora");
         System.out.println("Este programa te permitira realizar 8 operaciones, incluyendo conversion de unidades.");
 
-        Scanner entrada = new Scanner(System.in);
-        boolean continuar = true;
+        Scanner entrada = new Scanner(System.in); //Creacion del objeto Scanner para capturar los datos del usuario
+        boolean continuar = true; //Variable de control para iniciar el ciclo while
 
-        while (continuar) {
+        while (continuar) { //Bucle principal del programa
             System.out.println(" \n ¿Ya sabes qué operación quieres hacer? Escribe el nombre  de la operación o 'n' para ver el menú):");
-            String respuesta = entrada.nextLine().trim().toLowerCase();
+            String respuesta = entrada.nextLine().trim().toLowerCase(); //Captura la entrada del usuario
 
-            int opcion = -1;
-            switch (respuesta) {
+            int opcion = -1; //Variable que almacena la opcion ingresada por el usuario
+            switch (respuesta) { //Switch se usa para crear el menu de la calculadora, el cual se le asigna un numero a cada operacion respectivamente
                 case "suma":opcion =1; break;
                 case "resta": opcion = 2; break;
                 case "multiplicacion":
@@ -31,7 +32,7 @@ public class Ejercicio_calculadora {
                 case "módulo": opcion = 7; break;
                 case"conversion":
                 case "conversiones": opcion = 8; break;
-                case "n":
+                case "n": //En caso de que el usuario ingrese "n" se volvera a mostrar el menu
                     System.out.println("\n Menú de operaciones:");
                     System.out.println("1. Suma");
                     System.out.println("2. Resta");
@@ -43,12 +44,12 @@ public class Ejercicio_calculadora {
                     System.out.println("8. Conversiones de unidades");
                     System.out.println("9. Salir");
                     System.out.print("Seleccione una opción: ");
-                    opcion = entrada.nextInt();
-                    entrada.nextLine(); // Limpiar buffer
+                    opcion = entrada.nextInt(); //Captura la opcion del menu
+                    entrada.nextLine(); // Limpiar el buffer del Scanner
                     break;
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
-                    continue;
+                    continue; //En caso de ingresar una opcion no valida vuelve a solicitar una operacion
             }
 
 
