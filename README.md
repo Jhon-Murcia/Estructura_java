@@ -51,13 +51,36 @@ Pasos del funcionamiento
 
 Ejercicio con Switch
 
-Este ejercicio implementa una prueba de conocimiento basada en 10 preguntas de cultura general con 3 opciones de respuesta cada una y al final imprime un mensaje en base a la puntuación del usuario.
+Este ejercicio hace uso unicamente de switch para su ejecucion, trata de un juego de ficcion y aventura donde el usuario es un aventurero que se enfrentara a varios peligros en medio de un bosque
 
-Pasos del funcionamiento
-1. Se muestra un mensaje de bienvenida y una breve explicación de lo que hara el programa
-2. Se importa el Scanner que se usara para que el usuario pueda ingresar sus respuestas y se le asigna un nombre, en este caso "entrada" y se declara la variable "int PreguntaCorrecta=0" la cual va a almacenar las respuestas correctas del usuario
-3. Ahora se implementa un ciclo for de i=1 a i=10, que se ejecuta 10 veces (una por cada pregunta,dentro del ciclo, se utiliza una estructura switch para mostrar la pregunta correspondiente y sus opciones de respuesta, si es correcta se incrementa el contador.
-4. Al finalizar el cuestionario, se muestra cuántas respuestas correctas obtuvo el usuario.Según el puntaje obtenido, se muestra un mensaje de evaluación:0 a 5 respuestas correctas: "Quiz Reprobado.",6 a 9 respuestas correctas: "Quiz Aprobado.",10 respuestas correctas: "¡Felicidades! Eres un genio."  
+Pasos para el funcionamiento
+
+1. Se importa java.util.Scanner para permitir la entrada de datos del usuario desde el teclado, y se crea el objeto Scanner, en este caso se llamara entrada.
+2. Se muestra un mensaje con la introducción explicando que el jugador es un aventurero en un bosque encantado y debe tomar decisiones para avanzar en la historia.
+3. Selección del camino: Se le presentan dos opciones al jugador:
+Tomar un sendero oscuro y misterioso.
+Elegir un camino soleado y tranquilo.
+Se hace uso de un switch para determinar la ruta elegida.
+4. Rama del sendero oscuro: Si el usuario elige el sendero oscuro (case 1), se enfrenta a un lobo gigante y debe decidir entre:
+Correr.
+Enfrentarlo con una antorcha.
+Se usa un switch anidado para manejar esta decisión.
+5. Consecuencias del encuentro con el lobo:
+Si elige correr, el lobo lo alcanza y pierde.
+Si usa la antorcha, logra escapar y avanza a una segunda decisión.
+6. Elección de comida tras escapar del lobo: Luego de huir, el jugador tiene hambre y debe elegir entre:
+Comer miel de un panal.
+Comer bayas cercanas al río.
+Si elige la miel, las abejas lo atacan y pierde automaticamente
+Si elige las bayas, son comestibles y gana automaticamente
+7. Rama del camino soleado: Si el usuario elige el camino soleado (case 2), se encuentra con un puente roto y debe decidir entre:
+Intentar saltarlo.
+Buscar otro camino.
+Se usa otro switch anidado para manejar esta decisión.
+8. Consecuencias de la decisión del puente:
+Si intenta saltarlo, lo logra y avanza a la decisión de comida (igual que en la ruta del lobo).
+Si busca otro camino, se pierde en el bosque y pierde la partida.
+9. Por ultimo se muestra un mensaje de agradecimiento por jugar y se cierra el objeto Scanner (entrada) para liberar recursos.
 
 Ejercicio calculadora
 
