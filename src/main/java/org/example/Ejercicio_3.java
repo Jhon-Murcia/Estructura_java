@@ -1,43 +1,43 @@
-package org.example; // define el paquete de el proyecto
-import java.util.Scanner; // importa la clase Scanner para leer los datos de el usuario
-public class Ejercicio_3 { // definicion de la clase principal
+package org.example;
+import java.util.Scanner; //Importamos la clase Scanner para poder leer la entrada del usuario
+import java.util.Random;// Importamos la clase Ramdon para que se generen numeros aleatorios
 
-    public static void main(String[] args) { //metodo donde inicia la clase principal
+public class Ejercicio_3 { // se define la clase principal
 
-            System.out.println("En este codigo vamos a escoger un numero y el programa, nos dira si es primo o no ");//mensaje inicial
-            System.out.println("Usando estructuras de control como if, else, etc...");//mensaje inicial
+    public static void main(String[] args) { //Metodo principal donde se inicia la ejecución del programa
+        Scanner entrada = new Scanner(System.in); //Creamos un objeto escaner para leer la entrada del usuario
+        Random  aleatorio = new Random();// creamos un objeto ramdon  para generar los números aleatorios
+
+        int numeroSecreto = aleatorio.nextInt(100) + 1; // Generamos un número aleatorio de 1 a 100
+        int intento; // variable para almacenar el número que ingresa el usuario
+        int intentosMaximos = 10; // Definimos un número límite de intentos
 
 
-            Scanner scanner = new Scanner(System.in);// crear un objeto Scanner para leer la entrada del usuario
+        System.out.println("Bienvenid@ Este es un juego de adivinanza");
+        System.out.println("He pensado en un número de 1 a 100. ¿puedes adivinar cuál es?"); // mensaje para el usuario
+        System.out.println(" Tienes solo  " +  intentosMaximos + " intentos.");
 
-            int numero;//Variable para almacenar el numero ingresado
-            boolean esPrimo = true;// vairable si booleana que indicara si el numero es primo o no
+        for (int intentos =1; intentos <= intentosMaximos; intentos++) { //Bucle for para limitar los intentos
+            System.out.println("Intento #" + intentos + ": Ingresa un número:");// pedimos al usuario ingresar un número
+             intento = entrada.nextInt(); // Leemos el número ingresado por el usuario
 
-            System.out.println("Ingrese un número entero");//pide al usuario que ingrese un numero
-            numero = scanner.nextInt();//lee el numero ingresado por el usuario
-            //verifica si el numero es menor o igual a 1, ya que estos no son primos
-            if(numero<=1){
-                esPrimo = false; // lo marca como no primo
 
-            } else {
-                //bucle que recorre desde la mitad del numero (numero/2)
-                for(int i = 2; i <= numero/2;i++){
-                    if(numero % i ==0){// verifica si es divisible por algun numero distinto de 1 y de el mismo
-                        esPrimo = false;//no es primo
-                        break;//se rompe el blucle ya que sabemos que no es primo
-                    }
-                }
+             if ( intento == numeroSecreto) { // Si el número ingresado es menor que el número secreto
+                 System.out.println("¡Felicidades! Has adivinado el número en " + intentos + " intentos.");// Mensaje de éxito
+                 return; //Finaliza el programa si acierta
 
-            }
+             } else if ( intento > numeroSecreto) {// Si el número ingresado es mayor que el número secreto
+                 System.out.println("Estas fri@, el número es menor.  Intenta nuevamente.");//Le damos una pista al usuario
 
-            //estructura de control con if-else, muestra el resultado
-            if(esPrimo){
-                System.out.println( numero + " es número primo");//mensaje si es primo
+             } else {// Si el número ingresado es igual  que el número secreto
+                 System.out.println( " Estas fri@, el número es mayor. Intentalo nuevamente");//Le damos una pista al usuario
 
-            } else {
-                System.out.println( numero  +  " no es número primo");//mensaje si no es primo
-            }
+             }
+        }
+        //Si se agotan los intentos y no adivino
+        System.out.println("Lo sentimos, has agotado todos tus intentos.El número era: ");
 
-            scanner.close();// Cierra el objeto scanner para liberar recursos
+        entrada.close(); // ceramos la entrada.
+
         }
     }

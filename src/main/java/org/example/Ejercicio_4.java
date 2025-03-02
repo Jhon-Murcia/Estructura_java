@@ -1,145 +1,101 @@
-package org.example;// define el paquete del proyecto
+package org.example;
 
-import java.util.Scanner;//importa la clase scanner para leer los datos del usuario
+import java.util.Scanner; //Se importa la clase Scanner que permite la entrada de datos por parte del usuario
 
-public class Ejercicio_4 {//definicion de la clase principal
+public class Ejercicio_4 {
 
-    public static void main(String[] args) {//metodo principal donde inicia la ejecucion principal
-        System.out.println("Este programa esta diseñaso con una evaluacion de conocimiento basico");//mensaje inicial
-        System.out.println("el cual fue hecho con estructuras de control, if, else, else if , for , switch");
-        //se usa un bloque try-whit-resources para manejar el scanner automaticamente
-        try (Scanner entrada = new Scanner(System.in)) {
-            int PreguntaCorrecta = 0;//contador de respuestas correctas
-            // La evaluciacion generada sera sobre cultura general
-            // Preguntas y respuestas
-            // se inicia un siclo for para hacer 10 preguntas
-            for (int i = 1; i <= 10; i++) {
-                System.out.println("Pregunta" + i + ":");
+    public static void main(String[] args) {
 
-                switch (i) {
-                    case 1 -> {// pregunta 1
-                        System.out.println(" Cual es el pais mas grande del mundo?");
-                        System.out.println("1. Rusia");
-                        System.out.println("2. Canadá");
-                        System.out.println("3. China");
-                        System.out.print("Respuesta: ");
-                        int Pregunta1 = entrada.nextInt();
-                        if (Pregunta1 == 1)// respuesta correcta: Rusia
-                            PreguntaCorrecta++;
-                    }
+        Scanner entrada =new Scanner(System.in);
 
-                    case 2 -> {//Pregunta 2
-                        System.out.println(" Cuantos planetas tiene el sistema solar?");
-                        System.out.println("1. 7");
-                        System.out.println("2. 8");
-                        System.out.println("3. 9");
-                        System.out.print("Respuesta: ");
-                        int pregunta2 = entrada.nextInt();
-                        if (pregunta2 == 2)//respuesta correcta: 8
-                            PreguntaCorrecta++;
-                    }
+        //Introduccion al juego
+        System.out.println("¡HISTORIA!");
+        System.out.println("Eres un aventurero que llega a un bosque encantado. Tienes que elegir entre dos caminos, y luego decidir cómo enfrentar el peligro que encuentras en tu elección.");
+        System.out.println("¡Bienvenido al bosque encantado aventurero!");
+        System.out.println("A continuacion tienes dos caminos por elegir"); //Primera variante del juego
+        System.out.println("1. Sendero oscuro y misterioso");
+        System.out.println("2. Un camino soleado y tranquilo");
+        System.out.println("Elige una opcion (1 o 2): ");
+        int camino =entrada.nextInt();
 
-                    case 3 -> {//Pregunta 3
-                        System.out.println(" Cual es el río mas largo del mundo?");
-                        System.out.println("1. Amazonas");
-                        System.out.println("2. Nilo");
-                        System.out.println("3. Bogota xd");
-                        System.out.print("Respuesta: ");
-                        int pregunta3 = entrada.nextInt();
-                        if (pregunta3 == 1)//respuesta correcta: Amazonas
-                            PreguntaCorrecta++;
-                    }
+        switch (camino) { //Este switch se usa para mostrar y ejecutar los posibles resultados segun las opcines que escoja el usuario
+            case 1: //Primer caso, el usuario escoge el sendero oscuro
+                System.out.println("Has elegido el sendero oscuro, pero un momento se escuchan ruidos extraños... ¿Que podra ser?");
+                System.out.println("¡Oh no! es un lobo gigantesco, dedide rapido, ¿Que haras?");
+                System.out.println("1. Correr");
+                System.out.println("2. Enfrentarlo con una antorcha");
+                System.out.println("Elige una opcion: (1 o 2)");
+                int decision1= entrada.nextInt();
 
-                    case 4 -> {//pregunta 4
-                        System.out.println(" Quien pinto la Mona Lisa?");
-                        System.out.println("1. Miguel Angel");
-                        System.out.println("2. Leonardo da Vinci");
-                        System.out.println("3. Vincent van Gogh");
-                        System.out.print("Respuesta: ");
-                        int pregunta4 = entrada.nextInt();
-                        if (pregunta4 == 2)//respuesta correcta Leonardo da Vinci
-                            PreguntaCorrecta++;
-                    }
+                switch (decision1) { //switch anidado para analizar los posibles resultados en base a la opcion escogida por el usuario
+                    case 1:
+                        System.out.println("Intentas correr, pero el lobo es mas rapido ¡Has perdido!"); //Esta respuesta del usuario no fue la mejor, asi que automatucamente pierda y se finaliza la ejecucion del juego
+                        break; //Se usa el break para romper la ejecucion del codigo
+                    case 2:
+                        System.out.println("Usas la antorcha para asustar el lobo y logras escapar");
+                        System.out.println("Ahora vas caminando pero sientes una intensa hambre y necesitas comer algo urgente");
+                        System.out.println("1. Miel de un panal que se encuentra en un arbol");
+                        System.out.println("2. Bayas cercanas a un rio que se ven algo raras");
+                        int decision3= entrada.nextInt();
 
-                    case 5 -> {//pregunta 5
-                        System.out.println(" Que gas respiramos?");
-                        System.out.println("1. Dioxido de carbono");
-                        System.out.println("2. Oxigeno");
-                        System.out.println("3. Nitrogeno");
-                        System.out.print("Respuesta: ");
-                        int pregunta5 = entrada.nextInt();
-                        if (pregunta5 == 2)//respuesta correcta: Oxigeno
-                            PreguntaCorrecta++;
-                    }
-
-                    case 6 -> {//pregunta 6
-                        System.out.println(" Cual es el animal terrestre mas rapido?");
-                        System.out.println("1. Guepardo");
-                        System.out.println("2. Leon");
-                        System.out.println("3. Tigre");
-                        System.out.print("Respuesta: ");
-                        int pregunta6 = entrada.nextInt();
-                        if (pregunta6 == 1)//respuesta correcta: Guepardo
-                            PreguntaCorrecta++;
-                    }
-
-                    case 7 -> {//pregunta 7
-                        System.out.println(" Cual es el oceano mas grande?");
-                        System.out.println("1. Atlantico");
-                        System.out.println("2. Indico");
-                        System.out.println("3. Pacifico");
-                        System.out.print("Respuesta: ");
-                        int pregunta7 = entrada.nextInt();
-                        if (pregunta7 == 3)//respuesta correcta: Pacifico
-                            PreguntaCorrecta++;
-                    }
-
-                    case 8 -> {//pregunta 8
-                        System.out.println("En que pais se encuentran las piramides de Giza?");
-                        System.out.println("1. Peru");
-                        System.out.println("2. Egipto");
-                        System.out.println("3. Mexico");
-                        System.out.print("Respuesta: ");
-                        int pregunta8 = entrada.nextInt();
-                        if (pregunta8 == 2)//respuesta correcta: Egipto
-                            PreguntaCorrecta++;
-                    }
-
-                    case 9 -> {//pregunta 9
-                        System.out.println("Cual es el idioma mas hablado en el mundo?");
-                        System.out.println("1. Ingles");
-                        System.out.println("2. Español");
-                        System.out.println("3. Chino mandarín");
-                        System.out.print("Respuesta: ");
-                        int pregunta9 = entrada.nextInt();
-                        if (pregunta9 == 3)//respuesta correcta: Chino Mandarin
-                            PreguntaCorrecta++;
-                    }
-
-                    case 10 -> {//pregunta 10
-                        System.out.println("Cual es la capital de Francia?");
-                        System.out.println("1. Paris");
-                        System.out.println("2. Londres");
-                        System.out.println("3. Roma");
-                        System.out.print("Respuesta: ");
-                        int pregunta10 = entrada.nextInt();
-                        if (pregunta10 == 1)// respuesta correcta: paris
-                            PreguntaCorrecta++;
-                    }
+                        switch (decision3){ //En base a que el usuario escogio el sendero oscuro y la antorcha se crea otra variable con 2 posibles finales, la muerte o la victoria
+                            case 1:
+                                System.out.println("Intentaste comer la miel, pero las abejas defendieron su panal y te atacaron ¡Has perdido!"); //Una mala eleccion muy cerca del final lleva al usuario a perder el juego
+                                break;
+                            case 2:
+                                System.out.println("Afortunadamente las bayas eran comestibles, las consumes y logras llegar a tu destino aventurero ¡Has ganado!"); //Primer final alterno, el usuario gano el juego
+                                break;
+                            default:
+                                System.out.println("Dudas mucho aventurero has muerto de hambre ¡Has perdido!"); //En caso de que el usuario inserte una opcion no valida automaticamente pierde el juego
+                        }
+                        break;
+                    default:
+                        System.out.println("Dudas demasiado... el lobo ataca ¡Has perdido!");
+                        break;
                 }
-            }
+                break;
+            case 2: //En caso de que al inicio el jugador escoja el camino soleado se presenta la siguiente variante
+                System.out.println("Has elegido el camino soleado, todo es tranquilo, pero depronto...");
+                System.out.println("¡Oh no! Un puente roto bloquea el paso, ¿Que haras?"); //Primera vairante de la 2 opcion
+                System.out.println("1. Intertar saltarlo");
+                System.out.println("2. Buscar otro camino");
+                System.out.println("Elige una opcion: (1 o 2)");
+                int decision2= entrada.nextInt(); //Esta variable guarda la opcion escogida por el usuario para ejecutar los posibles resultados de su eleccion
 
-            // Resultado del quiz
-            System.out.println("\nRespuestas correctas: " + PreguntaCorrecta);
-            //evaluacion de los resultados
-            if (PreguntaCorrecta <= 5) {
-                System.out.println("Quiz Reprobado.");
-            } else if (PreguntaCorrecta >= 6 && PreguntaCorrecta <= 9) {
-                System.out.println(" Quiz Aprobado.");
-            } else if (PreguntaCorrecta == 10) {
-                System.out.println("¡Felicidades! Eres un genio.");
-            }
-        }// el scanner se cierra automaticamente gracias a try-with-resources
+                switch (decision2){
+                    case 1:
+                        System.out.println("Saltas con todas tus fuerzas... ¡Y lo logras! ¡Has ganado!");
+                        System.out.println("Ahora vas caminando pero sientes una intensa hambre y necesitas comer algo urgente"); //Tercera variante de la segunda opcion inicial
+                        System.out.println("1. Miel de un panal que se encuentra en un arbol"); //Al escoger la opcion correcta se activa esta tercera variante que genera el segundo final del juego, ganar o morir
+                        System.out.println("2. Bayas cercanas a un rio que se ven algo raras");
+                        int decision4= entrada.nextInt();
+
+                        switch (decision4){ //Este switch anidado se usa para
+                            case 1:
+                                System.out.println("Intentaste comer la miel, pero las abejas defendieron su panal y te atacaron ¡Has perdido!"); //Si el usuario escoge la opcion equivocada automaticamente pierde
+                                break;
+                            case 2:
+                                System.out.println("Afortunadamente las bayas eran comestibles, las consumes y logras llegar a tu destino aventurero ¡Has ganado!"); //Segun final alterno del juego
+                                break;
+                            default:
+                                System.out.println("Dudas mucho aventurero has muerto de hambre ¡Has perdido!"); //En caso de que se inserte una opcion no valida el usuario pierde automaticamente
+                        }
+
+                        break;
+                    case 2:
+                        System.out.println("Buscas otro camino, pero te pierdes en el bosque ¡Has perdido!");
+                        break;
+                    default:
+                        System.out.println("Te quedas indeciso muhco tiempo... oscurece y te pierdes. ¡Has perdido!");
+                }
+                break;
+            default:
+                System.out.println("No has elegido ningun camino, te quedaste atrapado en la entrada del bosque ¡Has perdido!");
+        }
+        System.out.println("¡Gracias por jugar!"); //Mensaje de agradecimiento por la ejecucion del juego independientemente del final que tuvo el usuario
+        entrada.close(); //Se cierra el objeto Scanner
+
+
     }
 }
 
