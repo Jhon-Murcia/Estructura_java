@@ -23,8 +23,9 @@ Pasos del funcionamiento
 
 3. se calcula las operaciones con los datos ingresados, se imprimen los datos obtenidos en la consola  y se cierra el programa. 
 
- Ejercicio con Operadores aritméticos, lógicos y racionales  
- Este programa utiliza peradores aritméticos, lógicos y racionales para simular un sistema bancario básico donde el usuario puede consultar su saldo y retirar dinero, siempre y cuando cumpla ciertos requisitos
+
+Ejercicio con Operadores aritméticos, lógicos y racionales 
+Este programa utiliza peradores aritméticos, lógicos y racionales para simular un sistema bancario básico donde el usuario puede consultar su saldo y retirar dinero, siempre y cuando cumpla ciertos requisitos
 
  Pasos del funcionamiento 
  1. se imprime  un mensaje en la consola el cual indica al usuario que el programa es un simulador de un Banco.
@@ -35,24 +36,26 @@ Pasos del funcionamiento
 Ejercicios con Estructuras de control
 
 Ejercicio con If, Else, y ciclo For
-Este ejercicio hace uso de estructuras de control para calcular si un numero es primo, para ello el programa solicita al usuario un numero y este le indicara al usuario si es primo o no es primo.
+Este ejercicio hace uso de estructuras de control para calcular si un numero es primo, para ello el programa solicita al usuario un número y este le indicara al usuario si es primo o no.
 
 Pasos del funcionamiento
-1. Se imprime un mensaje al usuario en la consola el cual da una pequeña descripcion de lo que hace el programa, en este caso calcular si un numero es o no es primo.
-2. Se crea un objeto Scanner para que el usuario pueda ingresar el numero deseado
-3. Se declara la variable int=numero la cual almacenara el numero ingresado por el usuario
-4. Haciendo uso de un condicional if y else se verifica si el numero es primo o no, el if verifica si el numero es igual o menor a 1, esto ya que estos numeros no son primos y lo marca automaticamente como no primo, el condicional else verifica si el numero ingresado es divisible por algun numero distinto a 1 y de el mismo.
-5. Por ultimo se hace uso de un condicional if el cual pone la condicion de que si el numero es primo imprima un mensaje en el que el usuario pueda entender que el numero es primo, de lo contrario el condicional else va a imprimir un mensaje que indique que el numero no es primo
+1. Se muestra en la consola un mensaje al usuario  el cual da una pequeña descripcion de lo que hace el programa, en este caso calcular si un número es o no primo.
+2. Se crea un objeto Scanner para que el usuario pueda ingresar el número deseado
+3. Se declara la variable int=numero la cual almacenara el número ingresado por el usuario
+4. Haciendo uso de una estructura de control if y else el programa determina si el numero es primo. Primero el if verifica si el número ingresado es menor o igual a 1,considerandose como no primo, si es mayor que 1 el programa entra al else y verifica si es divisible por algun numero distinto de 1  y de si mismo, si si es divisible  no es primo si no  el número si es primo.
+
+7. Por ultimo se hace uso de un condicional if el cual pone la condición de que si el número es primo imprima un mensaje en el que el usuario pueda entender que el número es primo, de lo contrario el condicional else va a imprimir un mensaje que indique que el número no es primo.
 
 Ejercicio con Switch
-Este ejercicio tiene un funcionamiento simple, el cual es una sencilla prueba de conocimiento basada en 10 preguntas de cultura general con 3 opciones de respuesta cada una y al final imprime un mensaje en base a la puntuacion del usuario
+Este ejercicio implementa una prueba de conocimiento basada en 10 preguntas de cultura general con 3 opciones de respuesta cada una y al final imprime un mensaje en base a la puntuación del usuario.
 
 Pasos del funcionamiento
-1. Se imprimen dos mensajes iniciales donde se explica la funcionalidad del programa y donde es especifica los tipos de estructuras de control que se usaron a lo largo de todo el codigo
-2. Como primer paso se importa el Scanner que se usara para que el usuario pueda ingresar sus respuestas y se le asigna un nombre, en este caso "entrada" y se declara la variable "int PreguntaCorrecta=0" la cual va a almacenar las respuestas correctas del usuario
-3. Ahora se implementa un ciclo for de i=1 a i=10, esto para que se pueda imprimir un mensaje indicando el numero de la pregunte, Ejemplo: Pregunta 1, Pregunta 2, etc
-4. Ahora se hace uso de un Switch en base a i para que se impriman todas las 10 preguntas una por una con sus opciones de respuesta, en este caso como son 10 preguntas se tendran 10 casos para el switch donde cada uno tendra la pregunta y sus 3 opciones de respuesta, por ultimo al final de cada switch se llama al Scanner entrada para que el usuario pueda ingresar su repsuesta y se agrega un if para validad si la respuesta es correcta y se agregue a ul contador usando ++
-5. Una vez mostradas y respondidas todas las 10 preguntas se va a imprimir su calificacion, para lo cual se usa in condicional if que indica que si el usuario tuvo =>5 respuestas correctas el quiz fue reprobo, si tuvo <6 aprobo con exito el quiz pero si tuvo ==10 respuestas correctas aprobo con meritos el quiz
+1. Se muestra un mensaje de bienvenida y una breve explicación de lo que hara el programa
+2. Se importa el Scanner que se usara para que el usuario pueda ingresar sus respuestas y se le asigna un nombre, en este caso "entrada" y se declara la variable "int PreguntaCorrecta=0" la cual va a almacenar las respuestas correctas del usuario
+3. Ahora se implementa un ciclo for de i=1 a i=10, que se ejecuta 10 veces (una por cada pregunta,dentro del ciclo, se utiliza una estructura switch para mostrar la pregunta correspondiente y sus opciones de respuesta, si es correcta se incrementa el contador.
+4.Al finalizar el cuestionario, se muestra cuántas respuestas correctas obtuvo el usuario.Según el puntaje obtenido, se muestra un mensaje de evaluación:0 a 5 respuestas correctas: "Quiz Reprobado.",6 a 9 respuestas correctas: "Quiz Aprobado.",10 respuestas correctas: "¡Felicidades! Eres un genio."  
+   
+
 
 
 
