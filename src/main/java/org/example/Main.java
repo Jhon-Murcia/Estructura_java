@@ -11,7 +11,6 @@ public class Main { //declaración de la clase principal
         //Integrantes del Equipo
         //System.out.println("Jhon Murcia");
         //System.out.println("Katherine Robayo");
-        //System.out.println("Oscar Gomes");
 
         //Ejemplo practico utilizando los tipos de datos primitivos
 

@@ -94,23 +94,23 @@ public class Ejercicio_calculadora {
                     num2 = entrada.nextDouble();
                     System.out.println("Resultado: " + Math.pow(num1, num2));// Calcula la potencia usando Math.pow
                     break;
-                case 6:
+                case 6: //Raiz cuadrada
                     System.out.println("Ingresa el número:");
                     num1 = entrada.nextDouble();
-                    if (num1 >= 0) {
-                        System.out.println("Resultado: " + Math.sqrt(num1));
+                    if (num1 >= 0) { //verifica que el número no sea negativo
+                        System.out.println("Resultado: " + Math.sqrt(num1)); //Calcula la potencia usando Math.sqrt
                     } else {
                         System.out.println("Error: No se puede calcular la raíz cuadrada de un número negativo.");
                     }
                     break;
-                case 7:
+                case 7: // Módulo
                     System.out.print("Ingrese el primer número: ");
                     num1 = entrada.nextDouble();
                     System.out.print("Ingrese el segundo número: ");
                     num2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + (num1 % num2));
+                    System.out.println("Resultado: " + (num1 % num2)); //calcula el residuo de la división
                     break;
-                case 8:
+                case 8: // Conversión de unidades
                     System.out.println("Selecciona el tipo de conversión que deseas hacer:");
                     System.out.println("1.Celsius a Fahrenheit");
                     System.out.println("2.Fahrenheit a Celsius");
@@ -122,7 +122,7 @@ public class Ejercicio_calculadora {
                     System.out.print("Ingresa el valor que deseas convertir: ");
                     num1 = entrada.nextDouble();
 
-                    switch (conversion) {
+                    switch (conversion) { //Switch para realizar la conversión seleccionada
                         case 1:
                             System.out.println("Resultado: "+ ((num1 * 9 /5)+ 32)+ "°F");
                             break;
@@ -147,9 +147,9 @@ public class Ejercicio_calculadora {
                     }
                     break;
 
-                case 9:
+                case 9: //Opción para salir
                     System.out.println("Saliendo de la calculadora. ¡Hasta pronto!");
-                    continuar = false;
+                    continuar = false;// se termina el bucle
                     break;
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
@@ -157,6 +157,6 @@ public class Ejercicio_calculadora {
 
 
         }
-        entrada.close(); // Cerrar Scanner después de salir del bucle
+        entrada.close(); // Cierra el Scanner después de salir del bucle
     }
 }
