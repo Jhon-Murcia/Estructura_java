@@ -32,7 +32,7 @@ public class Ejercicio_calculadora {
                 case "módulo": opcion = 7; break;
                 case"conversion":
                 case "conversiones": opcion = 8; break;
-                case "n": //En caso de que el usuario ingrese "n" se volvera a mostrar el menu
+                case "n": //Se muestra el menú si el usuario ingresa 'n'
                     System.out.println("\n Menú de operaciones:");
                     System.out.println("1. Suma");
                     System.out.println("2. Resta");
@@ -44,55 +44,55 @@ public class Ejercicio_calculadora {
                     System.out.println("8. Conversiones de unidades");
                     System.out.println("9. Salir");
                     System.out.print("Seleccione una opción: ");
-                    opcion = entrada.nextInt(); //Captura la opcion del menu
-                    entrada.nextLine(); // Limpiar el buffer del Scanner
+                    opcion = entrada.nextInt(); //Captura la opcion del menú
+                    entrada.nextLine(); // Limpia el buffer del Scanner
                     break;
-                default:
+                default:// Si la entrada no coincide con ninguna opción, muestra un mensaje de error
                     System.out.println("Opción no válida. Intente de nuevo.");
-                    continue; //En caso de ingresar una opcion no valida vuelve a solicitar una operacion
+                    continue; //En caso de ingresar una opción no valida vuelve a solicitar una operación
             }
 
 
-            double num1, num2;
-            switch (opcion) {
-                case 1:
+            double num1, num2;// Variables para almacenar los números ingresados
+            switch (opcion) {// Switch para ejecutar la operación correspondiente según la opción seleccionada
+                case 1: //Caso de Suma
                     System.out.println("Ingresa el primer número");
-                    num1 = entrada.nextDouble();
+                    num1 = entrada.nextDouble();// Captura el primer número
                     System.out.println("Ingresa el segundo número");
-                    num2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + (num1 + num2));
+                    num2 = entrada.nextDouble();// Captura el segundo número
+                    System.out.println("Resultado: " + (num1 + num2));// Muestra el resultado de la suma
                     break;
-                case 2:
+                case 2: //caso de resta
                     System.out.println("Ingresa el primer número");
-                    num1 = entrada.nextDouble();
+                    num1 = entrada.nextDouble();// Captura el primer número
                     System.out.println("Ingresa el segundo número");
-                    num2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + (num1 - num2));
+                    num2 = entrada.nextDouble();// Captura el segundo número
+                    System.out.println("Resultado: " + (num1 - num2));// Muestra el resultado de la resta
                     break;
-                case 3:
+                case 3: // caso de multiplicación
                     System.out.println("Ingresa el primer número");
                     num1 = entrada.nextDouble();
                     System.out.println("Ingresa el segundo número");
                     num2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + (num1 * num2));
+                    System.out.println("Resultado: " + (num1 * num2));// Muestra el resultado de la multiplicación
                     break;
-                case 4:
+                case 4: //caso de División
                     System.out.println("Ingresa el primer número");
                     num1 = entrada.nextDouble();
                     System.out.println("Ingresa el segundo número");
                     num2 = entrada.nextDouble();
-                    if (num2 != 0) {
-                        System.out.println("Resultado: " + (num1 / num2));
+                    if (num2 != 0) {// Verifica que el divisor no sea cero
+                        System.out.println("Resultado: " + (num1 / num2));// Muestra el resultado de la división
                     } else {
                         System.out.println("Error: División por cero no permitida.");
                     }
                     break;
-                case 5:
+                case 5: // caso potenciación
                     System.out.println("Ingresa la base: ");
                     num1 = entrada.nextDouble();
                     System.out.println("Ingresa el exponente:");
                     num2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + Math.pow(num1, num2));
+                    System.out.println("Resultado: " + Math.pow(num1, num2));// Calcula la potencia usando Math.pow
                     break;
                 case 6:
                     System.out.println("Ingresa el número:");
