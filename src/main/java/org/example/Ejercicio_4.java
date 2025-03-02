@@ -5,8 +5,7 @@ import java.util.Scanner;//importa la clase scanner para leer los datos del usua
 public class Ejercicio_4 {//definicion de la clase principal
 
     public static void main(String[] args) {//metodo principal donde inicia la ejecucion principal
-        System.out.println("Este programa esta diseñado con una evaluacion de conocimiento basico");//mensaje inicial
-        System.out.println("Usaremos estructuras de control if, else ,else if , switch, etc..");
+        System.out.println("Hello World!");//mensaje inicial
         //se usa un bloque try-whit-resources para manejar el scanner automaticamente
         try (Scanner entrada = new Scanner(System.in)) {
             int PreguntaCorrecta = 0;//contador de respuestas correctas
