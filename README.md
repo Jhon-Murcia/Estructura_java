@@ -14,7 +14,7 @@ El presente proyecto se desarrolló utilizando dos ramas ( main y develop ), con
 FUNCIONALIDAD 
 
 
-Ejercicio de Datos primitivos
+EJERCICIO DE DATOS PRIMITIVOS
 
 Este programa interactivo solicita información al usuario y realiza diversas operaciones utilizando distintos tipos de datos primitivos en Java. A través de preguntas y cálculos, el usuario experimenta cómo se manejan valores numéricos, caracteres y booleanos en un programa.
 
@@ -135,7 +135,11 @@ Pasos para el funcionamiento
 9. Se agregó una novena opción para permitir al usuario salir. Al seleccionarla, el programa finalizará su ejecución y mostrará un mensaje de despedida.
 10. Por último, una vez el usuario decida salir del programa el Scanner se cierra para liberar recursos y para evitar posibles errores en la ejecución del código
 
+Evidencia uso de ramas
 
+Durante el desarrollo de este proyecto se utilizaron 2 ramas para la programacion de los codigos, main y develop mediante las cuales se subieron diferentes commits y se usaron para solucionar y prevenir errores, la evidencia se adjunta a continuacion:
+
+![Imagen de evidencia de la existencia de las dos ramas main y develop](Evidencia%20uso%20de%20ramas.png)
 
 
  
