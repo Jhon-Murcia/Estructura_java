@@ -4,65 +4,25 @@ import java.util.Scanner; //Importacion del Scanner para que el usuario pueda in
 
 public class Ejercicio_calculadora {
     public static void main(String[] args) {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         //Mesnajes iniciales de bienvenida y funcionalidad del codigo
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
-=======
         //Mesnajes iniciales de bienvenida y funcionalidad del codigo
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
         System.out.println("Bienvenid@ a la calculadora");
         System.out.println("Este programa te permitira realizar 8 operaciones, incluyendo conversion de unidades.");
-
         Scanner entrada = new Scanner(System.in); //Creacion del objeto Scanner para capturar los datos del usuario
         boolean continuar = true; //Variable de control para iniciar el ciclo while
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        while (continuar) {
-            System.out.println(" \n ¿Ya sabes qué operación quieres hacer? Escribe el nombre  de la operación o 'n' para ver el menú):");
-            String respuesta = entrada.nextLine().trim().toLowerCase();
-
-            int opcion = -1;
-            switch (respuesta) {
-=======
-=======
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
         while (continuar) { //Bucle principal del programa
             System.out.println(" \n ¿Ya sabes qué operación quieres hacer? Escribe el nombre  de la operación o 'n' para ver el menú):");
             String respuesta = entrada.nextLine().trim().toLowerCase(); //Captura la entrada del usuario
-
             int opcion = -1; //Variable que almacena la opcion ingresada por el usuario
             switch (respuesta) { //Switch se usa para crear el menu de la calculadora, el cual se le asigna un numero a cada operacion respectivamente
-<<<<<<< HEAD
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
-=======
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
                 case "suma":opcion =1; break;
                 case "resta": opcion = 2; break;
-                case "multiplicacion":
                 case "multiplicación": opcion = 3; break;
-                case "division":
                 case "división": opcion = 4; break;
-                case "potenciacion":
                 case "potenciación": opcion = 5; break;
-                case "raíz cuadrada":
                 case "raiz cuadrada": opcion = 6; break;
-                case "modulo":
                 case "módulo": opcion = 7; break;
-                case"conversion":
                 case "conversiones": opcion = 8; break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                case "n":
-=======
-                case "n": //En caso de que el usuario ingrese "n" se volvera a mostrar el menu
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
-=======
-                case "n": //En caso de que el usuario ingrese "n" se volvera a mostrar el menu
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
                     System.out.println("\n Menú de operaciones:");
                     System.out.println("1. Suma");
                     System.out.println("2. Resta");
@@ -74,30 +34,22 @@ public class Ejercicio_calculadora {
                     System.out.println("8. Conversiones de unidades");
                     System.out.println("9. Salir");
                     System.out.print("Seleccione una opción: ");
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                     opcion = entrada.nextInt();
                     entrada.nextLine(); // Limpiar buffer
                     break;
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
                     continue;
-=======
-=======
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
+
                     opcion = entrada.nextInt(); //Captura la opcion del menu
                     entrada.nextLine(); // Limpiar el buffer del Scanner
                     break;
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
                     continue; //En caso de ingresar una opcion no valida vuelve a solicitar una operacion
-<<<<<<< HEAD
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
-=======
->>>>>>> ca63cfa484fa0f12daf708ab6315d1e721dffd4f
+
             }
-
-
             double num1, num2;
             switch (opcion) {
                 case 1:
